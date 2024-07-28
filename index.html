@@ -9,9 +9,14 @@
       rel="stylesheet"
     />
     <style>
+
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         font-family: "Sono", sans-serif;
-        height: 100vh;
+        /* height: 100vh; */
       }
 
       .plan-features {
@@ -20,6 +25,8 @@
 
       .plan-title, .plan-price {
         font-weight: bold;
+        padding: 0;
+        margin: 0;
       }
 
       .plan-title {
@@ -43,9 +50,8 @@
         padding: 1rem;
         border-radius: 7px;
         text-align: center;
-        flex-basis: 400px;
-        min-width: 250px;
-        flex-shrink: 0;
+        width: 400px;
+        flex: 1;
       }
 
       .pricing-plan li {
@@ -61,8 +67,12 @@
       }
 
       /* Hint: What can you do with a media query and flexbox? */
-      @media (max-width: 1250px) {
+      @media (max-width: 1000px) {
+      .pricing-container {
+        flex-direction: column;
+        height: 100%;
       }
+    }
     </style>
   </head>
 
